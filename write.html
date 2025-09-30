@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Write Post - INKSing</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style2.css">
+</head>
+<body>
+    <div class="container">
+        <header class="page-header">
+            <h1 class="page-title">INKSing</h1>
+            <p class="page-subtitle">Share your story with the world. Write, inspire, connect.</p>
+        </header>
+
+    
+        <nav class="nav-container">
+            <a href="index.html" class="logo">
+                <i class="fas fa-pen-nib"></i> INKSing
+            </a>
+            <div class="nav-links">
+                <a href="index.html"><i class="fas fa-home"></i> Home</a>
+                <a href="write.html" class="active"><i class="fas fa-pen"></i> Write</a>
+                <a href="blog.html"><i class="fas fa-blog"></i> Blog</a>
+            </div>
+        </nav>
+
+        <div class="success-message" id="success-message">
+            <i class="fas fa-check-circle"></i>
+            <h3>Post Published Successfully!</h3>
+            <p>Your blog post has been published and is now live on INKSing.</p>
+        </div>
+
+        <section class="write-post-section" id="write-post-section">
+            <h2 class="section-title">Create a New Blog Post</h2>
+            <form id="blog-form">
+                <div class="form-group">
+                    <label for="post-title">Post Title</label>
+                    <input type="text" id="post-title" class="form-control" placeholder="Enter your captivating post title..." required>
+                    <div class="char-counter"><span id="title-counter">0</span>/100 characters</div>
+                </div>
+                
+                <div class="form-group">
+                    <label>Featured Image</label>
+                    <div class="image-upload-container" id="upload-container">
+                        <i class="fas fa-cloud-upload-alt upload-icon"></i>
+                        <p class="upload-text">Click to upload or drag and drop</p>
+                        <p class="upload-subtext">PNG, JPG, JPEG up to 5MB</p>
+                        <button type="button" class="upload-btn">Choose File</button>
+                        <input type="file" id="file-input" accept="image/*">
+                    </div>
+                    
+                    <div class="image-preview-container" id="image-preview-container">
+                        <img src="" alt="Featured image preview" class="image-preview" id="image-preview">
+                        <button type="button" class="remove-image" id="remove-image">
+                            <i class="fas fa-times"></i> Remove Image
+                        </button>
+                    </div>
+                    
+                    <div class="image-description">
+                        <label for="image-desc">Image Description (Optional)</label>
+                        <textarea id="image-desc" class="form-control" placeholder="Describe what's in the image..."></textarea>
+                        <div class="char-counter"><span id="image-desc-counter">0</span>/150 characters</div>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="post-excerpt">Excerpt (Optional)</label>
+                    <textarea id="post-excerpt" class="form-control" placeholder="A brief, engaging summary of your post..."></textarea>
+                    <div class="char-counter"><span id="excerpt-counter">0</span>/200 characters</div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="post-content">Post Content</label>
+                    <textarea id="post-content" class="form-control" placeholder="Write your amazing blog post content here..." required></textarea>
+                    <div class="char-counter"><span id="content-counter">0</span> characters</div>
+                </div>
+                
+                <div class="form-actions">
+                    <button type="submit" class="btn btn-primary"><i class="fas fa-paper-plane"></i> Publish Post</button>
+                    <button type="button" class="btn btn-outline" id="cancel-post"><i class="fas fa-times"></i> Cancel</button>
+                </div>
+            </form>
+        </section>
+
+        <section class="full-post" id="full-post-section">
+            <a href="index.html" class="back-to-blog" id="back-to-blog">
+                <i class="fas fa-arrow-left"></i> Back to Blog
+            </a>
+            <div class="full-post-header">
+                <h1 class="full-post-title" id="full-post-title"></h1>
+                <div class="full-post-meta">
+                    <span id="full-post-date"></span>
+                    <span>By <strong>You</strong></span>
+                </div>
+            </div>
+            <div class="full-post-image" id="full-post-image">
+
+            </div>
+            <div class="full-post-content" id="full-post-content">
+
+            </div>
+        </section>
+
+        <footer>
+            <p>&copy; 2025 INKSing. Craft your story, share your voice.</p>
+        </footer>
+    </div>
+
+    <script src="script2.js"></script>
+
+</body>
+</html>
